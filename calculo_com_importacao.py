@@ -4,11 +4,12 @@ import pandas as pd
 # series = pd.Series()
 # dataframe.describe() - mostra estatísticas descritivas
 
-dados = pd.read_csv('dados_pessoas_e_notas.csv')
+#dados = pd.read_csv('dados_pessoas_e_notas.csv')
+dados = pd.read_csv("https://raw.githubusercontent.com/ect-info/ml/master/dados/didatico_dados_pessoas_e_notas.csv")
 
 dados_df = pd.DataFrame(dados)
 dadosNum = { 
-    'NotaDoAluno': dados_df.NotaDoAluno,
+    'Nota do aluno': dados_df['Nota do aluno'],
     'Idade': dados_df.Idade,
     'Peso': dados_df.Peso,
     'Altura': dados_df.Altura

@@ -26,23 +26,25 @@ media = dadosNum_df.mean()
 print('Média: ')
 print(media,'\n')
 
+# Moda
+moda = dados_df.drop(['Nome'],axis=1).mode()
+print('Moda: ')
+print(moda,'\n')
 
 # Mediana
 mediana = dadosNum_df.median()
 print('Mediana: ')
 print(mediana,'\n')
 
-
-# Moda
-moda = dados_df.drop(['Nome'],axis=1).mode()
-print('Moda: ')
-print(moda,'\n')
-
 # Quartil
-quartil = dadosNum_df.quantile()
-print('Quartil: ')
-print(quartil,'\n')
+print('1º Quartil: ')
+print(dadosNum_df.quantile(q=0.25),'\n')
 
+print('2º Quartil: ')
+print(dadosNum_df.quantile(q=0.50),'\n')
+
+print('3º Quartil: ')
+print(dadosNum_df.quantile(q=0.75),'\n')
 
 # Variância
 variancia = dadosNum_df.var()
@@ -54,5 +56,16 @@ desvio = dadosNum_df.std()
 print('Desvio Padrão: ')
 print(desvio,'\n')
 
-print('Outros dados:')
+#Amplitudes
+print('Amplitude máxima: ')
+print(dadosNum_df.max(),'\n')
+
+print('Amplitude mínima: ')
+print(dadosNum_df.min(),'\n')
+
+print('Amplitude: ')
+print(dadosNum_df.max() - dadosNum_df.min(),'\n')
+
+
+print('Alguns dados agrupados:')
 print(dados_df.describe(),'\n')
